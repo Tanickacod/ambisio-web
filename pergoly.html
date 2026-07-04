@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pergoly | Ambisio</title>
+  <meta name="description" content="Druhy pergol Ambisio — hliníkové, drevené, kombinované, bioklimatické a látkové pergoly vyrábané na mieru na Slovensku.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-nav="produkty">
+
+<header class="site-header" data-include="header"></header>
+
+<!-- Blok: Horný banner V1 -->
+<section class="hero hero--v1" data-hero-video="assets/video/pergoly.mp4" data-hero-poster="assets/img/pergola-renson.jpg">
+  <div class="hero-media"></div>
+  <div class="container hero-inner">
+    <nav class="breadcrumbs" style="color:rgba(255,255,255,.75)"><a href="index.html">Domov</a><span>/</span><a href="produkty.html">Produkty</a><span>/</span>Pergoly</nav>
+    <h1>Pergoly</h1>
+    <p class="lead">V pergolách Ambisio sa spája unikátny dizajn s maximálnou funkčnosťou. Vyrábame hliníkové, drevené a kombinované pergoly s integrovaným odtokovým systémom.</p>
+    <div><a class="btn btn--light" href="#druhy">Druhy pergol <span class="arr">→</span></a></div>
+  </div>
+</section>
+
+<!-- Blok: listing produktov s filtráciou tagmi -->
+<section class="section" id="druhy">
+  <div class="bg-shape" data-speed="0.12" style="width:300px; left:-80px; top:30%;"><img src="assets/icons/ambisio-m-shape.svg" alt=""></div>
+  <div class="container">
+    <div class="section-head reveal"><h2>Druhy pergol</h2></div>
+
+    <div class="filter-bar reveal" data-filter-bar="#pergoly-list">
+      <button class="filter-tag is-on" data-tag="*">Všetky</button>
+      <button class="filter-tag" data-tag="hlinik">Hliníková</button>
+      <button class="filter-tag" data-tag="drevo">Drevená</button>
+      <button class="filter-tag" data-tag="kombinovana">Kombinovaná</button>
+      <button class="filter-tag" data-tag="rovna-strecha">Rovná strecha</button>
+      <button class="filter-tag" data-tag="sikma-strecha">Šikmá strecha</button>
+      <button class="filter-tag" data-tag="bioklimaticka">Bioklimatická</button>
+      <button class="filter-tag" data-tag="latkova">Látková strecha</button>
+      <button class="filter-tag" data-tag="ku-stene">Ku stene</button>
+      <button class="filter-tag" data-tag="samostatna">Samostatne stojaca</button>
+    </div>
+
+    <div class="grid-3" id="pergoly-list">
+      <article class="card reveal" data-tags="drevo sikma-strecha ku-stene">
+        <div class="card-media"><img src="assets/img/pergola-cartesian.jpg" alt="Pergola Cartesian" loading="lazy"></div>
+        <h3><a href="pergola-combi.html">Cartesian</a></h3>
+        <p>Grafický dizajn drevenej pergoly, ktorá spája úžitkové vlastnosti s architektonickým výrazom.</p>
+      </article>
+      <article class="card reveal" data-tags="kombinovana drevo sikma-strecha ku-stene">
+        <div class="card-media"><img src="assets/img/pergola-combi.jpg" alt="Pergola Combi" loading="lazy"></div>
+        <h3><a href="pergola-combi.html">Combi</a></h3>
+        <p>Drevená pergola s urbanistickým dizajnom, ktorá zapadá aj do náročného mestského prostredia.</p>
+      </article>
+      <article class="card reveal" data-tags="hlinik rovna-strecha samostatna">
+        <div class="card-media"><img src="assets/img/pergola-flat.jpg" alt="Pergola Flat" loading="lazy"></div>
+        <h3><a href="pergola-combi.html">Flat</a></h3>
+        <p>Minimalistická hliníková pergola s plochou strechou a čistými líniami bez viditeľných spojov.</p>
+      </article>
+      <article class="card reveal" data-tags="hlinik rovna-strecha ku-stene">
+        <div class="card-media"><img src="assets/img/pergola-neo.jpg" alt="Pergola Neo" loading="lazy"></div>
+        <h3><a href="pergola-combi.html">Neo</a></h3>
+        <p>Atribúty pergoly s dizajnovým doplnkom — integrovaným LED osvetlením a skrytým odvodnením.</p>
+      </article>
+      <article class="card reveal" data-tags="hlinik bioklimaticka rovna-strecha samostatna">
+        <div class="card-media"><img src="assets/img/pergola-renson.jpg" alt="Bioklimatická pergola" loading="lazy"></div>
+        <h3><a href="pergola-combi.html">Bioklimatická pergola</a></h3>
+        <p>Pergoly Renson® s otočnými lamelami, ktoré regulujú svetlo, tieň aj prúdenie vzduchu.</p>
+      </article>
+      <article class="card reveal" data-tags="hlinik latkova ku-stene">
+        <div class="card-media"><img src="assets/img/tienenie-markiza.jpg" alt="Látková pergola" loading="lazy"></div>
+        <h3><a href="pergola-combi.html">Látková pergola</a></h3>
+        <p>Ľahká konštrukcia so sťahovateľnou látkovou strechou — flexibilné tienenie terasy.</p>
+      </article>
+      <div class="filter-empty">Tejto kombinácii filtrov nezodpovedá žiadna pergola. Skúste filter uvoľniť.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Blok: Kontaktný formulár s výberom produktov -->
+<section class="section section--sand-light">
+  <div class="container reveal" data-include="form-product"></div>
+</section>
+
+<footer class="site-footer" data-include="footer"></footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Výsledky vyhľadávania | Ambisio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header" data-include="header"></header>
+
+<div class="page-head">
+  <div class="container">
+    <span class="eyebrow">Vyhľadávanie</span>
+    <h1>Výsledky pre <span class="js-search-query" style="color:var(--c-brown)"></span></h1>
+    <form action="vyhladavanie.html" method="get" style="max-width:560px;margin-top:24px;display:flex;gap:12px">
+      <input class="js-search-input" type="search" name="q" placeholder="Hľadajte produkty, realizácie, články…" aria-label="Hľadaný výraz"
+             style="flex:1;border:none;border-bottom:1px solid var(--c-warm);background:transparent;padding:10px 2px;font:500 1.05rem 'Manrope',sans-serif;outline:none">
+      <button class="btn" type="submit">Hľadať</button>
+    </form>
+  </div>
+</div>
+
+<section class="section section--tight">
+  <div class="container">
+    <p class="muted reveal" style="font-size:.85rem">Ukážka výsledkov naprieč webom — produkty, realizácie aj články. V ostrej verzii sa výsledky vyhľadajú v celom obsahu.</p>
+
+    <div class="search-result reveal">
+      <span class="sr-type">Produkt</span>
+      <h3><a href="pergola-combi.html">Pergola Combi</a></h3>
+      <p class="muted">Drevená pergola s urbanistickým dizajnom — krytá terasa a prístrešok pre auto v jednom celku.</p>
+    </div>
+    <div class="search-result reveal">
+      <span class="sr-type">Produktová kategória</span>
+      <h3><a href="pergoly.html">Pergoly</a></h3>
+      <p class="muted">Hliníkové, drevené, kombinované, bioklimatické a látkové pergoly vyrábané na mieru.</p>
+    </div>
+    <div class="search-result reveal">
+      <span class="sr-type">Realizácia</span>
+      <h3><a href="projekt-a.html">Rodinný dom Trnava</a></h3>
+      <p class="muted">Kombinovaná pergola Combi s prístreškom pre auto a screenovým tienením Renson®.</p>
+    </div>
+    <div class="search-result reveal">
+      <span class="sr-type">Článok</span>
+      <h3><a href="blog-clanok.html">Ako funguje bioklimatická pergola a kedy sa oplatí</a></h3>
+      <p class="muted">Otočné lamely, senzory dažďa a vetra, integrované tienenie — všetko, čo potrebujete vedieť.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Kontaktný formulár -->
+<section class="section section--sand-light">
+  <div class="container reveal" data-include="form-general"></div>
+</section>
+
+<footer class="site-footer" data-include="footer"></footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
