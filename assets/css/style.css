@@ -245,6 +245,10 @@ p:last-child { margin-bottom: 0; }
 }
 .video-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: #e0524d; animation: pulse 1.6s infinite; }
 @keyframes pulse { 50% { opacity: .35; } }
+@media (max-width: 700px) {
+  .video-badge { display: none; }
+  .btn { padding: 14px 22px; font-size: .74rem; letter-spacing: .1em; white-space: nowrap; }
+}
 
 /* Piktogram na pozadí blokov */
 .bg-shape {
