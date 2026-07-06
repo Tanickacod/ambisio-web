@@ -1,0 +1,29 @@
+# AMBISIO — Ambiciózny vonkajší domov
+
+> AMBISIO s.r.o. je slovenský výrobca prémiových outdoorových stavaných elementov: hliníkových, drevených a bioklimatických pergol, zimných záhrad, plotov a brán, tieniacej techniky, terás a exteriérových doplnkov. Autorský dizajn, vlastná výroba na Slovensku, komplexná realizácia od zamerania a návrhu cez výrobu až po montáž a servis.
+
+Kľúčové fakty:
+- Sídlo a showroom: Logistická 10, 917 01 Trnava, Slovensko (návšteva na objednávku)
+- Kontakt: +421 911 600 881, ambisio@ambisio.sk
+- IČO: 53 509 366, založená 2020
+- Partneri a značky: Renson®, Somfy, Climax, eSafe, JAP, Vierkant, Escape speakers, Todus, Metalinox TT
+- Región pôsobenia: celé Slovensko, primárne západné Slovensko (Trnava, Bratislava, Nitra)
+- Autorizovaný Renson® partner — bioklimatické pergoly a screenové rolety
+
+## Produkty
+- [Pergoly](https://tanickacod.github.io/ambisio-web/pergoly.html): hliníkové, drevené, kombinované, bioklimatické a látkové pergoly s integrovaným odvodnením — modely Cartesian, Combi, Flat, Neo
+- [Ploty a brány](https://tanickacod.github.io/ambisio-web/ploty.html): hliníkové oplotenia na mieru — modely Zora, Lina, Stela, Vera, Gina, Block, Kely
+- [Všetky vonkajšie elementy](https://tanickacod.github.io/ambisio-web/produkty.html): zimné záhrady, fasády, tieniaca technika, terasy a dlažby, doplnky, exteriérový nábytok
+
+## Služby
+- [Naše služby](https://tanickacod.github.io/ambisio-web/sluzby.html): návrh a projekcia, vizualizácie, vlastná výroba, montáž, servisné programy
+- [Pre architektov a developerov](https://tanickacod.github.io/ambisio-web/architekti.html): technické podklady, CAD detaily, B2B spolupráca
+- [Ako prebieha spolupráca](https://tanickacod.github.io/ambisio-web/dopyt.html): dopyt → zameranie → návrh → výroba → montáž → servis
+
+## Referencie
+- [Projekty a realizácie](https://tanickacod.github.io/ambisio-web/projekty.html)
+- [Blog s radami a inšpiráciami](https://tanickacod.github.io/ambisio-web/blog.html)
+
+## Kontakt
+- [Kontakt a showroom](https://tanickacod.github.io/ambisio-web/kontakt.html)
+- [Nezáväzný dopyt](https://tanickacod.github.io/ambisio-web/dopyt.html)
