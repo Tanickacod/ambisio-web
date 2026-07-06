@@ -453,11 +453,13 @@ p:last-child { margin-bottom: 0; }
 .team-member .tm-contacts a:hover { color: var(--c-brown); }
 
 .partners { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: clamp(24px, 4vw, 56px); }
-.partners a {
-  font: 800 1.15rem var(--font); letter-spacing: .06em; color: var(--c-warm);
-  transition: color .2s; text-transform: uppercase;
+.partners a, .partners span.logo-item { display: inline-flex; align-items: center; }
+.partners img {
+  height: 40px; width: auto; max-width: 170px; object-fit: contain;
+  filter: grayscale(1) opacity(.55); transition: filter .25s, transform .25s;
 }
-.partners a:hover { color: var(--c-brown); }
+.partners a:hover img, .partners span.logo-item:hover img { filter: grayscale(0) opacity(1); transform: scale(1.05); }
+@media (max-width: 700px) { .partners img { height: 30px; max-width: 130px; } }
 
 .accordion { border-top: 1px solid var(--c-line); }
 .acc-item { border-bottom: 1px solid var(--c-line); }
