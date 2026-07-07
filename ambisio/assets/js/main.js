@@ -122,6 +122,16 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+  /* Demo odoslanie formulára (v ostrej verzii nahradí formulárový plugin) */
+  document.addEventListener('submit', e => {
+    const f = e.target.closest('.js-demo-form');
+    if (!f) return;
+    e.preventDefault();
+    const bad = [...f.querySelectorAll('[required]')].filter(i => !i.value.trim());
+    if (bad.length) { bad.forEach(i => i.style.borderBottomColor = '#c0392b'); bad[0].focus(); return; }
+    f.innerHTML = '<h3>Ďakujeme, dopyt sme prijali ✓</h3><p class="muted">Ozveme sa vám do 24 hodín.</p>';
+  });
+
   /* Hero video fallback */
   document.querySelectorAll('[data-hero-video]').forEach(hero => {
     const media = hero.querySelector('.hero-media');
