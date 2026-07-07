@@ -242,13 +242,18 @@
               <label for="f-place-${kind}">Miesto realizácie</label>
               <input id="f-place-${kind}" name="miesto" type="text">
             </div>`}
+            ${isProduct ? `
+            <div class="field">
+              <label for="f-msg-${kind}">Povedzte nám viac o vašej predstave</label>
+              <textarea id="f-msg-${kind}" name="sprava" rows="4"></textarea>
+            </div>` : ''}
           </div>
           <div>
-            ${isProduct ? PRODUCT_CHECKS : ''}
-            <div class="field" style="margin-top:${isProduct ? '24px' : '0'}">
+            ${isProduct ? PRODUCT_CHECKS : `
+            <div class="field">
               <label for="f-msg-${kind}">${isArch ? 'Popíšte váš projekt' : 'Ako vám vieme pomôcť?'}</label>
               <textarea id="f-msg-${kind}" name="sprava" rows="5"></textarea>
-            </div>
+            </div>`}
           </div>
         </div>
         <div class="form-foot">
