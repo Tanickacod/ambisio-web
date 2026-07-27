@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ambisio-web",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "C:\\Users\\PC\\AppData\\Local\\Temp\\claude\\C--Users-PC-OneDrive-Po--ta--moje-financie-ambisio-web\\1b7c2f85-6f5b-43c9-b865-31f96b74150c\\scratchpad\\static-server.js",
+        ".",
+        "4321"
+      ],
+      "port": 4321
+    }
+  ]
+}

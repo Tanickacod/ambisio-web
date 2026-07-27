@@ -2,3 +2,7 @@ node_modules/
 *.tmp
 Thumbs.db
 desktop.ini
+
+# Zdrojove video od klienta (479 MB) - GitHub ma limit 100 MB na subor.
+# V pracovnom priecinku zostava, len sa neverzuje.
+podklady/Tóbl.mov
