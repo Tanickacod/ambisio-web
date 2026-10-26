@@ -27,12 +27,7 @@
   --shadow: 0 18px 50px -20px rgba(29, 27, 24, .18);
 }
 
-/* Prepínač veľkosti písma (A− / A / A+) — nastavuje ho JS */
 html { font-size: 16px; scroll-behavior: smooth; }
-html[data-fontsize="s"]  { font-size: 14.5px; }
-html[data-fontsize="m"]  { font-size: 16px; }
-html[data-fontsize="l"]  { font-size: 18px; }
-html[data-fontsize="xl"] { font-size: 20px; }
 
 *, *::before, *::after { box-sizing: border-box; }
 body {
@@ -142,18 +137,6 @@ p:last-child { margin-bottom: 0; }
 .tool-btn:hover { color: var(--c-brown); }
 .tool-btn svg { width: 18px; height: 18px; }
 
-/* prepínač veľkosti písma */
-.fontsize-switch { display: flex; align-items: center; border: 1px solid var(--c-line); border-radius: var(--radius); }
-.fontsize-switch button {
-  background: none; border: none; cursor: pointer;
-  padding: 7px 10px; font-family: var(--font); font-weight: 800; color: var(--c-grey);
-  line-height: 1;
-}
-.fontsize-switch button:hover { color: var(--c-brown); }
-.fontsize-switch .fs-a  { font-size: 12px; }
-.fontsize-switch .fs-a2 { font-size: 16px; }
-.fontsize-switch button.is-on { color: var(--c-brown); }
-
 .lang-switch { position: relative; }
 .lang-switch > button {
   background: none; border: 1px solid var(--c-line); border-radius: var(--radius);
@@ -186,7 +169,6 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 1100px) {
   .main-nav { display: none; }
   .hamburger { display: grid; }
-  .fontsize-switch { display: none; }
 }
 .mobile-nav {
   position: fixed; inset: 0; z-index: 200; background: var(--c-white);
@@ -206,7 +188,6 @@ p:last-child { margin-bottom: 0; }
 .mobile-nav li.is-open .msub { display: block; }
 .mobile-nav .msub a { text-transform: none; letter-spacing: 0; font-weight: 600; padding: 9px 0; color: var(--c-grey); }
 .mobile-tools { display: flex; gap: 14px; align-items: center; margin-top: 28px; flex-wrap: wrap; }
-.mobile-tools .fontsize-switch { display: flex; }
 
 /* ============================================================
    HERO BANNERY (Verzia 1 = vysoký, Verzia 2 = nižší)

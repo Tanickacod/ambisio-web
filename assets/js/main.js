@@ -62,10 +62,6 @@
     </nav>
     <div class="header-tools">
       <button class="tool-btn js-search-toggle" aria-label="Vyhľadávanie">${ICO.search}</button>
-      <div class="fontsize-switch" role="group" aria-label="Veľkosť písma">
-        <button class="fs-a js-fs" data-fs="down" aria-label="Zmenšiť písmo">A−</button>
-        <button class="fs-a2 js-fs" data-fs="up" aria-label="Zväčšiť písmo">A+</button>
-      </div>
       <div class="lang-switch js-lang">
         <button aria-haspopup="true">SK ▾</button>
         <div class="lang-menu">
@@ -127,10 +123,6 @@
     <li><a href="blog.html">Blog</a></li>
   </ul>
   <div class="mobile-tools">
-    <div class="fontsize-switch" role="group" aria-label="Veľkosť písma">
-      <button class="fs-a js-fs" data-fs="down">A−</button>
-      <button class="fs-a2 js-fs" data-fs="up">A+</button>
-    </div>
     <a class="btn" href="dopyt.html">Nezáväzný dopyt</a>
   </div>`;
 
@@ -320,22 +312,10 @@
     }
   });
 
-  /* ---------- Prepínač veľkosti písma ---------- */
-  const SIZES = ['s', 'm', 'l', 'xl'];
-  let fsIdx = SIZES.indexOf(localStorage.getItem('ambisio-fs') || 'm');
-  if (fsIdx < 0) fsIdx = 1;
-  const applyFs = () => {
-    document.documentElement.dataset.fontsize = SIZES[fsIdx];
-    localStorage.setItem('ambisio-fs', SIZES[fsIdx]);
-  };
-  applyFs();
-  document.addEventListener('click', e => {
-    const b = e.target.closest('.js-fs');
-    if (!b) return;
-    if (b.dataset.fs === 'up' && fsIdx < SIZES.length - 1) fsIdx++;
-    if (b.dataset.fs === 'down' && fsIdx > 0) fsIdx--;
-    applyFs();
-  });
+  /* Prepínač veľkosti písma bol z webu odstránený. Zmaže sa aj voľba uložená
+     staršou verziou, inak by návštevník zostal natrvalo na nastavenej veľkosti
+     bez možnosti ju zmeniť. */
+  try { localStorage.removeItem('ambisio-fs'); } catch (e) {}
 
   /* ---------- Carousel šípky ---------- */
   document.querySelectorAll('[data-carousel]').forEach(wrap => {
