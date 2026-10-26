@@ -456,6 +456,38 @@ p:last-child { margin-bottom: 0; }
 .partners a:hover img, .partners span.logo-item:hover img { filter: grayscale(0) opacity(1); transform: scale(1.05); }
 @media (max-width: 700px) { .partners img { height: 30px; max-width: 130px; } }
 
+/* eSafe a Deer Concrete sú len ikonky bez nápisu — pri jednotnej výške
+   opticky zaniknú vedľa širokých slovných značiek, preto sú vyššie. */
+.partners .is-icon img { height: 56px; }
+@media (max-width: 700px) { .partners .is-icon img { height: 42px; } }
+
+/* Pás partnerských log — všetky v jednom rade, plynule sa posúva doľava.
+   V páse sú dva identické rady: keď sa prvý odsunie presne o svoju šírku
+   (vrátane medzery za ním), druhý stojí na jeho mieste a slučka je neviditeľná. */
+.marquee {
+  --pas-medzera: clamp(24px, 4vw, 56px);
+  overflow: hidden;
+  /* okraje jemne vyblednú, aby logá nevyskakovali z ničoho */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.marquee-track { display: flex; width: max-content; animation: partneri-pas 45s linear infinite; }
+.marquee .partners {
+  flex-wrap: nowrap; justify-content: flex-start;
+  gap: var(--pas-medzera); padding-right: var(--pas-medzera);
+}
+/* po nabehnutí myšou (alebo pri prechode tabulátorom) sa pás zastaví,
+   aby sa dalo logo prezrieť či kliknúť */
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track { animation-play-state: paused; }
+@keyframes partneri-pas { to { transform: translateX(-50%); } }
+
+/* Kto má v systéme vypnuté animácie, dostane statický pás na ručné posúvanie. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee { overflow-x: auto; }
+  .marquee-track { animation: none; }
+}
+
 .accordion { border-top: 1px solid var(--c-line); }
 .acc-item { border-bottom: 1px solid var(--c-line); }
 .acc-head {
