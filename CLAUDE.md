@@ -33,11 +33,13 @@ v oboch, treba to spraviť dvakrát.
 ### Spustenie
 
 ```bash
-node <cesta>/static-server.js . 4321
+node tools/static-server.js . 4321
 ```
 
 V praxi stačí povedať Claudovi „spusti web" — `.claude/launch.json` to rieši samo.
-Statický server je pomocný skript mimo repozitára, do webu nezasahuje.
+`tools/static-server.js` je pomocný skript bez závislostí, do samotného webu nezasahuje;
+je v repozitári zámerne, aby cesta v `launch.json` bola relatívna a spustenie fungovalo
+na každom počítači a v každej session.
 
 ## WordPress téma (`wp-theme/`)
 
