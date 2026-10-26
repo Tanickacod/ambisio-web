@@ -60,6 +60,19 @@ preto sú jej commity staršie než merge commit.
 - `Tóbl.mov` (479 MB) — zdrojové video, v `.gitignore` kvôli 100 MB limitu GitHubu.
   Skomprimovaná verzia je `assets/video/hero.mp4`.
 
+## Pred spustením na ostrú doménu
+
+Web je nasadený na GitHub Pages (`https://tanickacod.github.io/ambisio-web/`) ako
+rozpracovaný prototyp, preto má **zámerne vypnuté indexovanie**. Pri prechode na ostrú
+doménu treba vrátiť:
+
+- zmazať `<meta name="robots" content="noindex, nofollow">` zo všetkých 19 HTML stránok
+- v `robots.txt` vrátiť `Allow: /` pre AI boty a doplniť riadok `Sitemap:`
+- prepísať adresy v `sitemap.xml`, `canonical` a `og:url` z `tanickacod.github.io`
+  na ostrú doménu
+
+Bez toho web po spustení nikdy nenabehne vo vyhľadávačoch.
+
 ## Konvencie
 
 - Commit správy po slovensky, v tvare „Čo sa spravilo" (`Detail oplotenia Zora s galériou a videom`).

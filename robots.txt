@@ -1,32 +1,41 @@
 # AMBISIO — robots.txt
-# Klasické vyhľadávače aj AI boty sú vítané
+#
+# DOČASNÉ NASTAVENIE: web je rozpracovaný prototyp na github.io a nemá sa
+# dostať do vyhľadávačov. Pred spustením na ostrú doménu treba tento súbor
+# vrátiť do pôvodnej podoby (Allow: / pre všetkých + riadok Sitemap)
+# a zmazať značku <meta name="robots" content="noindex, nofollow"> zo
+# všetkých HTML stránok.
+#
+# Klasické vyhľadávače smú stránky načítať zámerne — inak by neuvideli
+# značku noindex v HTML a holá adresa by sa im aj tak mohla objaviť
+# vo výsledkoch. Indexovanie im zakazuje tá značka, nie tento súbor.
 
 User-agent: *
 Allow: /
 
-# AI / LLM boty (GEO)
+# AI / LLM boty sa značkou noindex neriadia, tým sa zakazuje priamo tu.
 User-agent: GPTBot
-Allow: /
+Disallow: /
 
 User-agent: OAI-SearchBot
-Allow: /
+Disallow: /
 
 User-agent: ChatGPT-User
-Allow: /
+Disallow: /
 
 User-agent: ClaudeBot
-Allow: /
+Disallow: /
 
 User-agent: Claude-Web
-Allow: /
+Disallow: /
 
 User-agent: PerplexityBot
-Allow: /
+Disallow: /
 
 User-agent: Google-Extended
-Allow: /
+Disallow: /
 
 User-agent: CCBot
-Allow: /
+Disallow: /
 
-Sitemap: https://tanickacod.github.io/ambisio-web/sitemap.xml
+# Sitemap zámerne neuvádzame, kým je web neindexovaný.
