@@ -255,6 +255,11 @@ p:last-child { margin-bottom: 0; }
   position: absolute; pointer-events: none; opacity: .5; z-index: 0;
   will-change: transform;
 }
+/* Piktogramy zámerne presahujú okraj bloku (left/right do mínusu).
+   Vodorovne ich oreže sekcia, aby sa celou stránkou nedalo posúvať do strán.
+   `clip` namiesto `hidden` — nerobí scroll kontajner, takže zvislé
+   presahy aj position:sticky vnútri fungujú ďalej. */
+.section { overflow-x: clip; }
 .bg-shape img { width: 100%; height: auto; }
 .section > .container { position: relative; z-index: 1; }
 
@@ -273,6 +278,9 @@ p:last-child { margin-bottom: 0; }
   font-size: 1rem; transition: background .2s, color .2s;
 }
 .arrow-btn:hover { background: var(--c-ink); color: var(--c-white); }
+/* Na kraji dráhy sa už nedá ďalej — šípka zosvetlie a nereaguje. */
+.arrow-btn:disabled { opacity: .3; cursor: default; pointer-events: none; }
+.arrow-btn:disabled:hover { background: var(--c-white); color: var(--c-ink); }
 
 .carousel {
   display: grid; grid-auto-flow: column;

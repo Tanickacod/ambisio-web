@@ -340,12 +340,62 @@
   /* ---------- Carousel šípky ---------- */
   document.querySelectorAll('[data-carousel]').forEach(wrap => {
     const track = wrap.querySelector('.carousel, .gallery');
-    wrap.querySelectorAll('.arrow-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const step = track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width + 24 : 320;
-        track.scrollBy({ left: btn.dataset.dir === 'next' ? step : -step, behavior: 'smooth' });
+    if (!track) return;
+
+    /* Šípky sú v hlavičke sekcie, teda nad [data-carousel], nie v ňom.
+       Ak ich vnútri nenájdeme, hľadáme ich v celej sekcii — ale len keď je
+       v nej jediný karusel, aby sa šípky nenaviazali na cudziu dráhu. */
+    let arrows = wrap.querySelectorAll('.arrow-btn');
+    if (!arrows.length) {
+      const sekcia = wrap.closest('section, .section');
+      if (sekcia && sekcia.querySelectorAll('[data-carousel]').length === 1) {
+        arrows = sekcia.querySelectorAll('.arrow-btn');
+      }
+    }
+    if (!arrows.length) return;
+
+    const krok = () => {
+      const prva = track.firstElementChild;
+      if (!prva) return 320;
+      const medzera = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 24;
+      return prva.getBoundingClientRect().width + medzera;
+    };
+
+    /* Na kraji dráhy nemá šípka čo robiť — zhasne, aby bolo vidno, že sa ďalej nedá. */
+    const prekresliStav = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      arrows.forEach(btn => {
+        const naKonci = btn.dataset.dir === 'next'
+          ? track.scrollLeft >= max - 1
+          : track.scrollLeft <= 1;
+        btn.disabled = max <= 1 || naKonci;
       });
+    };
+
+    /* Posunie dráhu o jednu kartu. Skúsi to plynulo, ale ak sa do 250 ms nič
+       nepohne (niektoré vstavané prehliadače plynulý scroll vnorených
+       kontajnerov neanimujú a ticho ho zahodia), dorazí to skokom — tlačidlo
+       tak zaberie vždy. */
+    const posun = (smer) => {
+      const ciel = track.scrollLeft + smer * krok();
+      const pred = track.scrollLeft;
+      track.scrollTo({ left: ciel, behavior: 'smooth' });
+      setTimeout(() => {
+        if (Math.abs(track.scrollLeft - pred) < 1) {
+          track.scrollTo({ left: ciel, behavior: 'auto' });
+        }
+        prekresliStav();
+      }, 250);
+      setTimeout(prekresliStav, 700);
+    };
+
+    arrows.forEach(btn => {
+      btn.addEventListener('click', () => posun(btn.dataset.dir === 'next' ? 1 : -1));
     });
+
+    track.addEventListener('scroll', prekresliStav, { passive: true });
+    window.addEventListener('resize', prekresliStav);
+    prekresliStav();
   });
 
   /* ---------- Lightbox galéria (obrázky + videá, šípky, popisy) ---------- */
