@@ -11,7 +11,6 @@ $logos = [
     ['somfy.png', 'Somfy'],
     ['climax.png', 'Climax'],
     ['esafe.svg', 'eSafe'],
-    ['jap.png', 'JAP'],
     ['todus.png', 'Todus'],
     ['bera.png', 'Bera'],
     ['deer-concrete.png', 'Deer Concrete'],

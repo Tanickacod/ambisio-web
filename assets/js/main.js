@@ -43,7 +43,6 @@
           <ul class="submenu">
             <li><a href="renson.html">Renson</a></li>
             <li><a href="renson.html">eSafe</a></li>
-            <li><a href="renson.html">JAP</a></li>
             <li><a href="renson.html">Climax</a></li>
             <li><a href="renson.html">Vierkant</a></li>
             <li><a href="renson.html">Escape speakers</a></li>
@@ -109,7 +108,7 @@
     <li><button class="msub-toggle">Značky <span>+</span></button>
       <ul class="msub">
         <li><a href="renson.html">Renson</a></li><li><a href="renson.html">eSafe</a></li>
-        <li><a href="renson.html">JAP</a></li><li><a href="renson.html">Climax</a></li>
+        <li><a href="renson.html">Climax</a></li>
         <li><a href="renson.html">Vierkant</a></li><li><a href="renson.html">Escape speakers</a></li>
         <li><a href="renson.html">Metalinox TT</a></li><li><a href="renson.html">Todus</a></li>
         <li><a href="renson.html">Somfy</a></li>
