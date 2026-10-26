@@ -103,7 +103,13 @@ p:last-child { margin-bottom: 0; }
   height: var(--header-h);
   display: flex; align-items: center; gap: clamp(16px, 3vw, 40px);
 }
-.logo img { height: 26px; width: auto; }
+/* Logo je široký, vzdušný nápis (pomer cca 6:1) — pri malej výške sa stráca,
+   preto výrazne väčšie a škáluje sa so šírkou okna.
+   flex: none + max-width: none sú nutné: inak sa odkaz ako flex položka zmrští,
+   globálne img{max-width:100%} oreže šírku, výška ostane vynútená a nápis sa
+   stlačí do šírky. */
+.logo { flex: none; }
+.logo img { height: clamp(21px, 2.1vw, 28px); width: auto; max-width: none; }
 
 .main-nav { margin-left: auto; }
 .main-nav > ul { display: flex; gap: clamp(10px, 1.6vw, 26px); list-style: none; margin: 0; padding: 0; }
