@@ -142,7 +142,7 @@
         <div class="footer-contact">
           <a href="tel:+421911600881">+421 911 600 881</a>
           <a href="mailto:ambisio@ambisio.sk">ambisio@ambisio.sk</a>
-          <a href="https://maps.google.com/?q=Logistick%C3%A1+10,+919+42+Zavar" target="_blank" rel="noopener">Logistická 10, Trnava</a>
+          <a href="https://maps.google.com/?q=Logistick%C3%A1+10,+919+42+Zavar" target="_blank" rel="noopener">Logistická 10, Trnava — areál Zavar</a>
         </div>
       </div>
       <div>
@@ -186,7 +186,7 @@
     </div>
     <div class="contact-item">
       <span class="ci-icon">${ICO.pin}</span>
-      <div><strong>Showroom</strong><a href="https://maps.google.com/?q=Logistick%C3%A1+10,+919+42+Zavar" target="_blank" rel="noopener">Logistická 10, Trnava</a></div>
+      <div><strong>Showroom</strong><a href="https://maps.google.com/?q=Logistick%C3%A1+10,+919+42+Zavar" target="_blank" rel="noopener">Logistická 10, Trnava — areál Zavar</a></div>
     </div>
   </div>`;
 
