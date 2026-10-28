@@ -3,7 +3,7 @@
  * Title: Recenzie zákazníkov
  * Slug: ambisio/recenzie
  * Categories: ambisio
- * Description: Tri recenzie s hviezdičkami v riadku.
+ * Description: Tri skutočné recenzie z Google profilu firmy, s hviezdičkami v riadku.
  */
 ?>
 <!-- wp:group {"className":"section","layout":{"type":"constrained"}} -->
@@ -21,8 +21,8 @@
       <!-- wp:html -->
       <div class="review-card">
         <span class="stars">★★★★★</span>
-        <blockquote>„Od návrhu po montáž profesionálny prístup. Pergola presne podľa našich predstáv a termín dodržaný na deň."</blockquote>
-        <cite>Martin K. <small>bioklimatická pergola, Trnava</small></cite>
+        <blockquote>„S firmou AMBISIO mám výbornú skúsenosť. Pomohli mi prekryť už existujúcu pergolu. Od začiatku bolo všetko jasne a zrozumiteľne vysvetlené. Ochotne poradili s výberom riešenia, zohľadnili moje požiadavky a samotná realizácia prebehla hladko a profesionálne. Výsledok je presne podľa predstáv. Určite odporúčam"</blockquote>
+        <cite>Peter Soltes <small>prekrytie pergoly</small></cite>
       </div>
       <!-- /wp:html -->
     </div>
@@ -32,8 +32,8 @@
       <!-- wp:html -->
       <div class="review-card">
         <span class="stars">★★★★★</span>
-        <blockquote>„Oceňujem, že Ambisio riešilo celok — plot, bránu aj schránku. Všetko ladí s domom a kvalita materiálov je vidieť."</blockquote>
-        <cite>Zuzana a Peter H. <small>oplotenie, Bratislava</small></cite>
+        <blockquote>„S firmou Ambisio sme najskôr riešili prístrešok na auto a neskôr aj hliníkovú bránu s drevenou výplňou a bráničku. Oceňujeme ich ochotu prispôsobiť riešenie presne podľa našich predstáv. Výsledok pôsobí veľmi kvalitne a sme s ním spokojní."</blockquote>
+        <cite>Peter Babusik <small>prístrešok a brána</small></cite>
       </div>
       <!-- /wp:html -->
     </div>
@@ -43,8 +43,8 @@
       <!-- wp:html -->
       <div class="review-card">
         <span class="stars">★★★★★</span>
-        <blockquote>„Zimná záhrada zmenila spôsob, akým dom používame. Konzultácia v showroome nám pomohla vybrať správne riešenie."</blockquote>
-        <cite>rodina Vargová <small>zimná záhrada, Nitra</small></cite>
+        <blockquote>„Firmu Ambisio môžem po svojej skúsenosti vrelo odporúčať! Riešili sme exteriérový dizajnový reproduktor a bola som maximálne spokojná s komunikáciou, riešením a odpoveďami na otázky ako aj s expresným dodaním. Veľmi pekne ďakujem a prajem veľa spokojných klientov!"</blockquote>
+        <cite>Tatiana Žilková <small>exteriérové ozvučenie</small></cite>
       </div>
       <!-- /wp:html -->
     </div>

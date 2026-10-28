@@ -353,21 +353,26 @@
       });
     };
 
-    /* Posunie dráhu o jednu kartu. Skúsi to plynulo, ale ak sa do 250 ms nič
-       nepohne (niektoré vstavané prehliadače plynulý scroll vnorených
-       kontajnerov neanimujú a ticho ho zahodia), dorazí to skokom — tlačidlo
-       tak zaberie vždy. */
+    /* Posunie dráhu o jednu kartu. Cieľ sa počíta ako absolútna pozícia karty,
+       nie ako prírastok k aktuálnemu posunu — inak by sa pri scroll-snape
+       odchýlky sčítavali a dráha by postupne ušla. Ak sa do 350 ms nedostane
+       presne na cieľ (niektoré prehliadače plynulý scroll vnorených kontajnerov
+       neanimujú alebo ho snap stiahne inam), dorazí to skokom. */
     const posun = (smer) => {
-      const ciel = track.scrollLeft + smer * krok();
-      const pred = track.scrollLeft;
+      const k = krok();
+      const poslednyIndex = Math.max(track.children.length - 1, 0);
+      const index = Math.round(track.scrollLeft / k);
+      const cielIndex = Math.min(Math.max(index + smer, 0), poslednyIndex);
+      const ciel = Math.min(cielIndex * k, track.scrollWidth - track.clientWidth);
+
       track.scrollTo({ left: ciel, behavior: 'smooth' });
       setTimeout(() => {
-        if (Math.abs(track.scrollLeft - pred) < 1) {
+        if (Math.abs(track.scrollLeft - ciel) > 2) {
           track.scrollTo({ left: ciel, behavior: 'auto' });
         }
         prekresliStav();
-      }, 250);
-      setTimeout(prekresliStav, 700);
+      }, 350);
+      setTimeout(prekresliStav, 800);
     };
 
     arrows.forEach(btn => {
