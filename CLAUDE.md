@@ -24,11 +24,13 @@ v oboch, treba to spraviť dvakrát.
 - `assets/css/style.css` (~590 riadkov) — všetko CSS v jednom súbore. Farby, typografia
   a rozmery sú CSS premenné v `:root` na začiatku. Nové farby sa nepridávajú natvrdo,
   použi existujúce premenné.
-- `assets/js/main.js` (~520 riadkov) — vanilla JS, bez frameworku. Navigácia, galéria
-  s lightboxom, prepínač veľkosti písma (`data-fontsize` na `<html>`), vyhľadávanie,
-  dopytový formulár.
-- Stránky sa navzájom linkujú relatívne (`o-nas.html`), hlavička a pätička sú v každom
-  HTML skopírované — pri zmene navigácie ich treba prejsť všetky.
+- `assets/js/main.js` (~520 riadkov) — vanilla JS, bez frameworku. Vkladá hlavičku
+  a pätičku (`data-include`), takže navigácia a pätička sa menia na jednom mieste
+  pre všetky stránky. Ďalej rieši galériu s lightboxom, šípky karuselov, vyhľadávanie
+  a dopytový formulár.
+- Stránky sa navzájom linkujú relatívne (`o-nas.html`). Hlavička, pätička, blok kontaktov
+  a formuláre sa do stránok vkladajú z `main.js` cez `data-include` — menia sa teda na
+  jednom mieste, nie v každom HTML zvlášť.
 
 ### Spustenie
 

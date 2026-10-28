@@ -134,7 +134,7 @@
         <a class="logo" href="index.html"><img src="assets/icons/logo-black.svg" alt="Ambisio"></a>
         <div class="socials">
           <a href="https://www.instagram.com/ambisio_slovakia/" target="_blank" rel="noopener" aria-label="Instagram">${ICO.ig}</a>
-          <a href="https://www.facebook.com/profile.php?id=100095232048469" target="_blank" rel="noopener" aria-label="Facebook">${ICO.fb}</a>
+          <a href="https://www.facebook.com/ambisiosk" target="_blank" rel="noopener" aria-label="Facebook">${ICO.fb}</a>
           <a href="https://www.linkedin.com/company/ambisio" target="_blank" rel="noopener" aria-label="LinkedIn">${ICO.in}</a>
           <a href="https://sk.pinterest.com/ambisiosk/" target="_blank" rel="noopener" aria-label="Pinterest">${ICO.pin_social}</a>
           <a href="https://www.youtube.com/@Ambisio" target="_blank" rel="noopener" aria-label="YouTube">${ICO.yt}</a>
