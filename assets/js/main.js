@@ -204,6 +204,8 @@
     </div>
   </div>`;
 
+  /* Dve varianty: 'product' na celom webe a 'architect' na stránke pre architektov.
+     Líšia sa pravým stĺpcom a jedným poľom vľavo, zvyšok je spoločný. */
   function formTemplate(kind) {
     const isProduct = kind === 'product';
     const isArch = kind === 'architect';
@@ -244,7 +246,7 @@
           <div>
             ${isProduct ? PRODUCT_CHECKS : `
             <div class="field">
-              <label for="f-msg-${kind}">${isArch ? 'Popíšte váš projekt' : 'Ako vám vieme pomôcť?'}</label>
+              <label for="f-msg-${kind}">Popíšte váš projekt</label>
               <textarea id="f-msg-${kind}" name="sprava" rows="5"></textarea>
             </div>`}
           </div>
@@ -263,7 +265,6 @@
     if (key === 'header') { el.innerHTML = HEADER; }
     if (key === 'footer') { el.innerHTML = FOOTER; }
     if (key === 'contacts') { el.innerHTML = CONTACTS; }
-    if (key === 'form-general') { el.innerHTML = formTemplate('general'); }
     if (key === 'form-product') { el.innerHTML = formTemplate('product'); }
     if (key === 'form-architect') { el.innerHTML = formTemplate('architect'); }
   });
